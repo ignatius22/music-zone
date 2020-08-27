@@ -26,12 +26,16 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'figaro'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -56,6 +60,13 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+    gem 'database_cleaner'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 4.3'
+  # Easy installation and use of web drivers to run system tests with browsers
+  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
