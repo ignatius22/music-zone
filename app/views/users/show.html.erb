@@ -49,7 +49,7 @@
      <div class="profile-container">
         <div class="follow-icon">
           <% unless current_user.id == @user.id %>
-              <% if current_user.followed.any? { |person| person.Followedid == @user.id }%>
+              <% if current_user.followed.any? { |person| person.followedId == @user.id }%>
                 <%= link_to unfollow_path(@user), method: :delete, class: "font-unfollow-icon" do %>
                   <i class="fas fa-minus-circle fa-2x"></i>
                 <% end %>
@@ -108,7 +108,7 @@
                   <% end %>
                   <h6><%= follower.Follower.Fullname %></h6>
                 </div>
-                <% if current_user.followed.any? { |person| person.Followedid == follower.Follower.id }%>
+                <% if current_user.followed.any? { |person| person.followedId == follower.Follower.id }%>
                   <%= link_to unfollow_path(follower.Follower), method: :delete, class: "follow-icons" do %>
                       <i class="fas fa-minus-circle fa-2x"></i>
                   <% end %>

@@ -25,8 +25,7 @@
               <% if opinion.Author[:Photo].nil? %>
                 <%= gravatar_for opinion.Author, size: 50 %>
               <% else %>
-               
-                <%= cl_image_path("opinion.Author.Photo.thumb.url ", :cloud_name => 'djbskjkn3')%>
+                <%= image_tag opinion.Author.Photo.thumb.url %>
               <% end %>
             </div>
           </div>
