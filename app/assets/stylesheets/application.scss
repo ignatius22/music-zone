@@ -1,5 +1,6 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap";
-
 
 
 $primary-color-dark: #213246;
@@ -25,7 +26,7 @@ li {
 .hero-img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 35vh;
   overflow: hidden;
 }
 
@@ -65,10 +66,15 @@ li {
 
 .side-nav {
   background-color: $primary-color-dark;
+  height: 160vh;
+  font-size: 13px;
+ text-decoration: none;
 
-  .current-user {
-    display: flex;
-    padding: 1rem 0 2rem 1.5rem;
+.current-user {
+  display: flex;
+  padding: 1rem 0 2rem 1.5rem;
+   font-size: 13px;
+   font-weight: bold;
   }
 
   .current-user img {
@@ -77,9 +83,13 @@ li {
 
   .current-user h6 {
    padding: 1.5rem 0 0 1rem;
-   color: #667B90;
+   color: #AAB8C2;
+   font-size: 14px;
+     font-weight: bold;
   }
-
+ h6{
+  color: #AAB8C2;
+ }
   .follow {
     display: flex;
     border: 2px solid #16272F;
@@ -87,6 +97,8 @@ li {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    font-size: 14px;
+     font-weight: bold;
   }
 
   .stats-1 {
@@ -107,16 +119,20 @@ li {
     padding-left: 1rem;
     margin-bottom: -0.4rem;
     color:white;
+
   }
 
   .side-links {
     padding: 1rem 0 0;
     width: 100%;
+    color: black;
   }
 
   .links {
     padding: 1rem 0 1rem 2.5rem;
     color: #667B90;
+    font-size:13px;
+    text-decoration: none;
   }
 
   .links i {
@@ -127,11 +143,13 @@ li {
   .links:hover {
     color: white;
     background-color: $primary-color;
+    text-decoration: none;
   }
   
   .links-path:hover {
     color: white;
     background-color: $primary-color;
+    text-decoration: none;
   }
 }
 
@@ -141,7 +159,7 @@ main {
 
 #logo {
   color: white;
-  padding: 1.5rem 0 1.5rem 1.5rem;
+  padding: 1.5rem 3.5rem 1rem 1.5rem;
 }
 
 .nav-bar {
@@ -149,15 +167,17 @@ main {
   justify-content: space-between;
   background-color: $primary-color;
   height: 3rem;
+  position:sticky;
+  top: 0;
 
   ul {
     display: flex;
-    align-items: center;
-    margin-top: 4px;
     padding-right: 1rem;
   }
   li {
     padding: 20px;
+    align-items: center;
+
   }
   i {
     color: #63758B;
@@ -186,12 +206,18 @@ main {
   .tweets-heading {
     padding: 1rem 0 1.5rem 0;
     border-bottom: 2px solid #E7EBEE;
+    color: #AAB8C2;
+    font-size: 13px;
+    font-weight:500;
   }
   .tweet-form {
     background-color: white;
     border-radius: 0.5rem;
     width: 98%;
     padding: 1rem;
+    font-size: 13px;
+    font-weight:500;
+    color: #657786;
   }
 
   .text-input {
@@ -213,6 +239,8 @@ main {
     border-radius: 0.5rem;
     width: 98%;
     padding: 1rem;
+    font-size: 12px;
+    color: #657786;
   }
 
   .tweet-body-header {
@@ -223,14 +251,15 @@ main {
   .tweet-avatar {
     float: left;
     margin:0 1rem 2rem 0;
+
   }
 
-  .tweet-content span {
-    font-size: 1.2rem;
+  .tweet-content p {
+    font-size: 15px;
   }
 
    .tweet-content h4 {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     margin-bottom: -0.2rem;
   }
 
@@ -247,6 +276,9 @@ aside {
     padding: 1rem 0 0.5rem 0;
     border-bottom: 2px solid #E7EBEE;
     margin-bottom: 1rem;
+    font-size: 13px;
+    color: #657786;
+    font-weight: 500;
   }
 
    .who-follow-profile {
@@ -263,9 +295,12 @@ aside {
 
   .who-follow-profile h6 {
     padding-left: 1rem;
+    font-size: 12px;
   }
 }
-
+h5 {
+    font-size:  12px;
+}
 .main-user-body {
   display: grid;
   grid-template-columns: 75% 25%;
@@ -283,6 +318,9 @@ aside {
   .user-body-header {
     border-bottom: 2px solid #E7EBEE;
     padding: 1rem 0 1.5rem 0;
+    font-size: 12px;
+    color: #AAB8C2;
+    font-weight:500;
   }
 
   .user-avatar {
@@ -291,12 +329,14 @@ aside {
   }
 
   .user-content span {
-    font-size: 1.2rem;
+    font-size: 0.7rem;
+    color: #657786;
   }
 
    .user-content h4 {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     margin-bottom: -0.1rem;
+    color: #657786;
   }
 
  .clear {
@@ -347,20 +387,26 @@ aside {
 
   .stat-no {
     text-align: center;
-    font-size: 1rem;
+    font-size: 13px;
+    color: #657786;
   }
 
   .stat-name {
-    font-size: 1rem;
+    font-size: 13px;
+    color: #657786;
   }
 
   .followers-section {
-    margin-left: 1rem;
+    margin-left: 13px;
+    color: #657786;
   }
 
   .followers-header {
     padding-top: 1rem;
     border-bottom: 1px solid #E2E3E5;
+    font-size: 12px;
+    font-weight: 500;
+    color: #657786;
   }
 
   .follower-profile {

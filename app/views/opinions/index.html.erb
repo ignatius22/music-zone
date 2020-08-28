@@ -7,15 +7,12 @@
       <p class="tweets-heading">TWEETS</p>
       <div class="tweet-form">
         <p>TWEET SOMETHING</p>
-        <% if @opinion.errors.full_messages.any? %>
-          <% @opinion.errors.full_messages.each do |message| %>
-              <p class="text-danger"><%= message %></p>
-          <% end %>
+        
+        <%= form_for @opinion, url: new_opinion_path, remote: true do |f| %>
+          <%= f.text_area :Text, class: "form-control", placeholder: "Compose new tweet" %>
+          <%= f.submit "Tweet", class: "btn-primary btn-sm mt-2" %>
         <% end %>
-        <%= form_for @opinion, url: new_opinion_path  do |f| %>
-          <%= f.text_area :Text, class: "text-input", placeholder: "Compose new tweet" %>
-          <%= f.submit "Tweet", class: "text-btn" %>
-        <% end %>
+        <%= render 'checks'%>
       </div>
       <div class="tweet-body">
         <p class="tweet-body-header">NEW TWEETS</p>
@@ -31,7 +28,7 @@
           </div>
           <div class="tweet-content">
             <h4><%= opinion.Author.Fullname.upcase %></h4>
-            <span><%= sanitize opinion.Text %></span>
+            <p><%= sanitize opinion.Text %></p>
               <span class="like">
                 <% if opinion.likes.any? { |like| like.UserId == current_user.id }%>
                   <%= link_to unlike_path(opinion), method: :delete, class: 'user-1' do %>
