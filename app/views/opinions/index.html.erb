@@ -15,7 +15,7 @@
         <%= render 'checks'%>
       </div>
       <div class="tweet-body">
-        <p class="tweet-body-header">NEW TWEETS</p>
+        <p class="tweet-body-header text-primary"><%= pluralize(@opinions.count, 'NEW TWEET' )%></p>
         <% @opinions.each do |opinion| %>
           <div class="tweet-avatar">
             <div class="picture">
@@ -36,7 +36,7 @@
                   <% end %>
                 <% else %>
                   <%= link_to like_path(opinion), class: 'user-2' do %>
-                    <i class="fas fa-heart text-white"></i>
+                    <i class="fas fa-heart "></i>
                   <% end %>
                 <% end %>
                 <% if opinion.likes.any? %>

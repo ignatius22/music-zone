@@ -16,7 +16,11 @@
         <% @opinions.each do |opinion| %>
           <div class="user-avatar shadow-lg">
             <div class="picture">
-            <%= render_author_pic(user) %>         
+               <% if opinion.Author[:Photo].nil? %>
+                <%= gravatar_for opinion.Author, size: 50 %>
+              <% else %>
+                <%= image_tag opinion.Author.Photo.thumb.url %>
+              <% end %>         
             </div>
           </div>
           <div class="user-content">
