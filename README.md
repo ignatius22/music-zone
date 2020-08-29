@@ -45,7 +45,7 @@ You should follow the guidelines of the given design, including:
 	Gems used for testing: Capybara, Rspec-Rails, Shoulda-matchers and FactoryBot
 
 
-#demo picture
+# demo picture
   - homepage
      ![alt text](homepage.png)
 
