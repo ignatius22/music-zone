@@ -10,7 +10,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 gem 'puma', '~> 3.11'
 
 group :development, :test do
- gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :production do
