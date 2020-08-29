@@ -92,8 +92,8 @@ The application was deployed on heroku. To deploy your own copy, you can follow 
 
 
 
-#Authors
-bust_in_silhouette Ignatius Sani
+Authors
+  bust_in_silhouette Ignatius Sani
 
  - Github: @ignatius22
 - Twitter: @iggy_code
