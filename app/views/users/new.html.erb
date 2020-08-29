@@ -1,17 +1,16 @@
-<%=render 'layouts/message' %>
+
 <div class="mt-5 text-center">
     <div class="twitter-logo">
         <i class="fas fa-guitar fa-3x shadow p-3 mb-2"></i>
     </div>
     <h3 class="mb-5">Sign Up  For Music Tweets</h3>
-</div>
-<% if @user.errors.any? %>
-<div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-        <div class="panel panel-danger">
+
+    <% if @user.errors.any? %>
+    <div class="container w-50">
+        <div class="alert alert-danger">
             <div class="panel-heading">
-                <h3>
-                    <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h3>
+                <h4>
+                    <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
                 <div class="panel-body">
                     <ul>
                         <% @user.errors.full_messages.each do |message| %>
@@ -24,9 +23,8 @@
             </div>
         </div>
     </div>
-</div>
 <% end %>
-
+</div>
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-10 col-xl-9 mx-auto">
