@@ -53,8 +53,9 @@ You should follow the guidelines of the given design, including:
   - userpage
   	 ![alt text](userpage.png)
 
-#Getting Started
-##To get a local copy up and running follow these steps:
+Getting Started
+
+To get a local copy up and running follow these steps:
 ---
 
 - Prerequisites
@@ -63,7 +64,7 @@ You should follow the guidelines of the given design, including:
 -   Postgres: >=9.5
 -    Git
 
-##Usage
+Usage
   - Fork/Clone this project to your local machine
   -  Open folder in your local enviroment and run these lines of code to get started:
   -    Install gems with:
@@ -72,7 +73,7 @@ You should follow the guidelines of the given design, including:
     -Setup database with:
    -rails db:migrate
 
-##Setup cloudinary:
+Setup cloudinary:
 
 	Goto cloudinary.com setup your account and get your cloudinary credentials.
 	Add the credentials to the config/application.yml like this :
