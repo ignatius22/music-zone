@@ -92,21 +92,22 @@ The application was deployed on heroku. To deploy your own copy, you can follow 
 
 
 
-Github: @ignatius22
-Twitter: @iggy_code
-Linkedin: ignatiussani
-handshake Contributing
-Contributions and feature requests are welcome!
+#Authors
+bust_in_silhouette Ignatius Sani
+
+ - Github: @ignatius22
+- Twitter: @iggy_code
+-  Linkedin: ignatiussani!
 
 Start by:
 
--Forking the project
--Cloning the project to your local machine
--cd into the project directory
--Run git checkout -b your-branch-name
--Make your contributions
--Push your branch up to your forked repository
--Open a Pull Request with a detailed description to the development(or master if not available) branch of the original project for a review
+- Forking the project
+- Cloning the project to your local machine
+- cd into the project directory
+- Run git checkout -b your-branch-name
+- -Make your contributions
+- Push your branch up to your forked repository
+- Open a Pull Request with a detailed description to the development(or master if not available) branch of the original project for a review
 - Show your support
 Give a star if you like this project!
 
