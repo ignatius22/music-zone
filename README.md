@@ -39,3 +39,7 @@ You should follow the guidelines of the given design, including:
      Ruby v2.6.5
      Ruby on Rails v6.0.3
      Gems used for testing: Capybara, Rspec-Rails, Shoulda-matchers and FactoryBot
+#  Built With
+	Ruby v2.6.5
+	Ruby on Rails v5.2.1
+	Gems used for testing: Capybara, Rspec-Rails, Shoulda-matchers and FactoryBot
