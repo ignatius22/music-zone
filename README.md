@@ -45,13 +45,16 @@ You should follow the guidelines of the given design, including:
 	Gems used for testing: Capybara, Rspec-Rails, Shoulda-matchers and FactoryBot
 
 
-# demo picture
+# demo pictures
   - homepage
      ![alt text](homepage.png)
 
 
   - userpage
   	 ![alt text](userpage.png)
+
+# live demo
+   [live demo](https://shielded-oasis-34342.herokuapp.com/login)
 
 Getting Started
 
