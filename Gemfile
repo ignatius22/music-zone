@@ -7,6 +7,7 @@ ruby '2.6.5'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
+gem 'pg'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -38,9 +39,6 @@ gem 'popper_js', '~> 1.14.5'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'rubocop'
-
-gem 'pg'
-
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
