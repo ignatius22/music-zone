@@ -92,12 +92,13 @@ The application was deployed on heroku. To deploy your own copy, you can follow 
 
 
 
-Authors
-  bust_in_silhouette Ignatius Sani
+## Authors
 
- - Github: @ignatius22
-- Twitter: @iggy_code
--  Linkedin: ignatiussani!
+👤 **Ignatius Sani**
+
+- Github: [ignatius22](https://github.com/ignatius22)
+- Twitter: [@Iggy_code](https://twitter.com/iggy_code)
+- Linkedin: [ignatiussani](https://www.linkedin.com/in/ignatiussani)
 
 Start by:
 

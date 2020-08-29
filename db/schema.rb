@@ -10,36 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_27_140625) do
-
-  create_table "followings", force: :cascade do |t|
-    t.integer "followerId"
-    t.integer "followedId"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+ActiveRecord::Schema.define(version: 20_200_827_140_625) do
+  create_table 'followings', force: :cascade do |t|
+    t.integer 'followerId'
+    t.integer 'followedId'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.integer "OpinionId"
-    t.integer "UserId"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'likes', force: :cascade do |t|
+    t.integer 'OpinionId'
+    t.integer 'UserId'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "opinions", force: :cascade do |t|
-    t.integer "AuthorId"
-    t.string "Text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'opinions', force: :cascade do |t|
+    t.integer 'AuthorId'
+    t.string 'Text'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "Fullname"
-    t.string "Username"
-    t.string "Photo"
-    t.string "CoverImage"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'Fullname'
+    t.string 'Username'
+    t.string 'Photo'
+    t.string 'CoverImage'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
-
 end

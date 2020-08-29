@@ -1,6 +1,5 @@
 class LikesController < ApplicationController
-
-	  def create
+  def create
     Like.create(OpinionId: params[:opinion_id], UserId: current_user.id)
     redirect_to root_path
   end
