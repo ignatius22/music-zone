@@ -43,3 +43,76 @@ You should follow the guidelines of the given design, including:
 	Ruby v2.6.5
 	Ruby on Rails v5.2.1
 	Gems used for testing: Capybara, Rspec-Rails, Shoulda-matchers and FactoryBot
+
+
+#demo picture
+  - homepage
+     ![alt text](homepage.png)
+
+
+  - userpage
+  	 ![alt text](userpage.png)
+
+#Getting Started
+##To get a local copy up and running follow these steps:
+---
+
+- Prerequisites
+-  Ruby: 2.6.5
+-   Rails: 5.2.1
+-   Postgres: >=9.5
+-    Git
+
+##Usage
+  - Fork/Clone this project to your local machine
+  -  Open folder in your local enviroment and run these lines of code to get started:
+  -    Install gems with:
+
+    -bundle install
+    -Setup database with:
+   -rails db:migrate
+
+##Setup cloudinary:
+
+	Goto cloudinary.com setup your account and get your cloudinary credentials.
+	Add the credentials to the config/application.yml like this :
+	CLOUDINARY_NAME: "YOUR_CLOUDINARY_NAME"
+	CLOUDINARY_API_KEY: "YOUR_CLOUDINARY_API_KEY"
+	CLOUDINARY_API_SECRET: "YOUR_CLOUDINARY_API_SECRET"
+- Don't forget to add that file to your .gitignore file. Start server with:
+    rails server
+- Then open a web page and go to port 3000 on your local machine.
+
+    -Running tests
+    -rspec
+    -Deployment
+
+The application was deployed on heroku. To deploy your own copy, you can follow the following steps:
+
+
+
+Github: @ignatius22
+Twitter: @iggy_code
+Linkedin: ignatiussani
+handshake Contributing
+Contributions and feature requests are welcome!
+
+Start by:
+
+-Forking the project
+-Cloning the project to your local machine
+-cd into the project directory
+-Run git checkout -b your-branch-name
+-Make your contributions
+-Push your branch up to your forked repository
+-Open a Pull Request with a detailed description to the development(or master if not available) branch of the original project for a review
+- Show your support
+Give a star if you like this project!
+
+Acknowledgments
+You can access all the design info (color, typography, layouts) in this link:
+(https://www.behance.net/gregoirevella)
+
+Design idea by Gregoire Vella.
+
+
