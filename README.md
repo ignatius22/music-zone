@@ -1,6 +1,6 @@
 # Twitter Redesign
 ---
-In this project, I redesign a popular micro-blogging platform twitter.com also mocking the basic functionalities of the applcation.
+In this project, I redesigned a popular micro-blogging platform twitter.com also making the basic functionalities of the applcation.
 
 ## Project Specification
 ---
@@ -27,13 +27,10 @@ In this project, I redesign a popular micro-blogging platform twitter.com also m
          ii. Button to follow a user.
          iii. Stats: total number of tweets, number of followers and number of following users.
          iv. List of people who follow this user.
-7. At the end extend your MVP app with one simple feature of your choice.
-
-You should follow the guidelines of the given design, including:
 
 ## Future features
 ---
-  Add instant messaging functionalty.
+  Add instant messaging functionality.
   Performing various reactions, such as comments on tweets etc.
 
 #  Built With
@@ -80,6 +77,7 @@ Setup cloudinary:
 	CLOUDINARY_NAME: "YOUR_CLOUDINARY_NAME"
 	CLOUDINARY_API_KEY: "YOUR_CLOUDINARY_API_KEY"
 	CLOUDINARY_API_SECRET: "YOUR_CLOUDINARY_API_SECRET"
+  
 - Don't forget to add that file to your .gitignore file. Start server with:
     rails server
 - Then open a web page and go to port 3000 on your local machine.
