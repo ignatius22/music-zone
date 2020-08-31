@@ -54,21 +54,26 @@ Getting Started
 
 To get a local copy up and running follow these steps:
 ---
-
 - Prerequisites
--  Ruby: 2.6.5
+-   Ruby: 2.6.5
 -   Rails: 5.2.1
 -   Postgres: >=9.5
--    Git
+-   Git
 
-Usage
-  - Fork/Clone this project to your local machine
+Start by:
+
+- Forking the project
+- cd into the project directory
+- Run git checkout -b your-branch-name
+- Make your contributions
+- Push your branch up to your forked repository
+- Open a Pull Request with a detailed description to the development(or master if not available) branch of the original project for a review
   -  Open folder in your local enviroment and run these lines of code to get started:
-  -    Install gems with:
+  -  Bundle install gems
 
-    -bundle install
-    -Setup database with:
-   -rails db:migrate
+   - Setup database using the following command:
+      -rails db:create
+      -rails db:migrate
 
 Setup cloudinary:
 
@@ -78,17 +83,42 @@ Setup cloudinary:
 	CLOUDINARY_API_KEY: "YOUR_CLOUDINARY_API_KEY"
 	CLOUDINARY_API_SECRET: "YOUR_CLOUDINARY_API_SECRET"
   
-- Don't forget to add that file to your .gitignore file. Start server with:
+- Don't forget to add that file to your .gitignore file.
+- Start server with:
     rails server
+
 - Then open a web page and go to port 3000 on your local machine.
 
     -Running tests
     -rspec
     -Deployment
 
-The application was deployed on heroku. To deploy your own copy, you can follow the following steps:
+The application was deployed on heroku. 
 
+#To deploy your own copy, you can follow the following steps:
 
+##Add the pg gem
+ If you’re using an existing app that was created without specifying --database=postgresql, you need to add the pg gem to your Rails project. Edit your Gemfile and change this line: 
+
+gem 'sqlite3'
+
+To this:
+  
+gem 'pg'
+
+Then bundle install.
+
+#Deploy your application to Heroku
+    heroku create
+
+##Deploy your code:
+    git push heroku master
+
+##Migrate your database
+    heroku run rake db:migrate
+
+##Visit your application
+    heroku open
 
 ## Authors
 
@@ -98,15 +128,7 @@ The application was deployed on heroku. To deploy your own copy, you can follow 
 - Twitter: [@Iggy_code](https://twitter.com/iggy_code)
 - Linkedin: [ignatiussani](https://www.linkedin.com/in/ignatiussani)
 
-Start by:
 
-- Forking the project
-- Cloning the project to your local machine
-- cd into the project directory
-- Run git checkout -b your-branch-name
-- -Make your contributions
-- Push your branch up to your forked repository
-- Open a Pull Request with a detailed description to the development(or master if not available) branch of the original project for a review
 - Show your support
 Give a star if you like this project!
 
