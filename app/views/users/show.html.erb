@@ -5,66 +5,17 @@
   <div class="main-user-body">
     <div class="user-tweet">
       <div class="hero-img">
-        <% unless @user[:CoverImage].nil? %>
-          <%= image_tag @user.CoverImage.standard.url, class: 'photo-hero shadow-lg p-3' %>
-        <% else %>
-          <img src="https://via.placeholder.com/150" alt="">
-        <% end %>
+      <%=render 'hero' %>
       </div>
       <div class="user-body">
         <p class="user-body-header">ALL TWEETS</p>
-        <% @opinions.each do |opinion| %>
-          <div class="user-avatar shadow-lg">
-            <div class="picture">
-               <% if opinion.Author[:Photo].nil? %>
-                <%= gravatar_for opinion.Author, size: 50 %>
-              <% else %>
-                <%= image_tag opinion.Author.Photo.thumb.url %>
-              <% end %>         
-            </div>
-          </div>
-          <div class="user-content">
-            <h4><%= opinion.Author.Fullname.upcase %></h4>
-            <span><%= opinion.Text %></span>
-            <span class="like">
-           <% if opinion.likes.any? { |like| like.UserId == current_user.id }%>
-                  <%= link_to unlike_path(opinion), method: :delete, class: 'user-1' do %>
-                  <%= link_to icon(' fa-heart', id: 'my-icon'), class: "fa-2x  mb-4" %>
-                  <% end %>
-                <% else %>
-                  <%= link_to like_path(opinion), class: 'user-2' do %>
-                    <i class="fas fa-heart "></i>
-                  <% end %>
-                <% end %>
-                <% if opinion.likes.any? %>
-                  <p><%= "#{pluralize(opinion.likes.size, 'like')}" %></p>
-                <% end %>
-        </span>
-            <div class="clear"></div>
-          </div>
-        <% end %>
+          <%=render 'tweets_like' %>
       </div>
     </div>
     <div  class="user-profile">
      <div class="profile-container">
         <div class="d-flex justify-content-center mt-5">
-          <% unless current_user.id == @user.id %>
-              <% if current_user.followed.any? { |person| person.followedId == @user.id }%>
-                <%= link_to unfollow_path(@user), method: :delete, class: "font-unfollow-icon" do %>
-                  <i class="fas fa-minus-circle "></i>
-                <% end %>
-              <%else%>
-                <%= link_to follow_path(@user), class: "font-follow-icon" do %>
-                  <i class="fas fa-plus-circle "></i>
-                <% end %>
-              <% end %>
-          <% end %>
-          <div class="picture ">
-            <% unless @user[:Photo].nil? %>
-              <%= image_tag @user.Photo.medium.url , class: "rounded-circle ml-3 mr-3" %>
-            <% else %>
-              <%= gravatar_for @user, size: 100 %>
-            <% end %>
+          <%= render 'followedby' %>
           </div>
           <i class="fas fa-list text-primary pt-2"></i>
         </div>
@@ -98,27 +49,7 @@
           <p>FOLLOWED BY</p>
         </div>
         <div class="my-followers">
-            <% @followers.each do |follower| %>
-              <div class="follower-profile">
-                <div class="follower-avatar">
-                  <% unless follower.follower[:Photo].nil? %>
-                    <%= image_tag follower.follower.Photo.thumb.url %>
-                  <% else %>
-                    <%= gravatar_for follower.follower, size: 50 %>
-                  <% end %>
-                  <h6><%= follower.follower.Fullname %></h6>
-                </div>
-                <% if current_user.followed.any? { |person| person.followedId == follower.follower.id }%>
-                  <%= link_to unfollow_path(follower.follower), method: :delete, class: "follow-icons" do %>
-                      <i class="fas fa-minus-circle "></i>
-                  <% end %>
-                <%else%>
-                  <%= link_to follow_path(follower.follower), class: "follow-icons" do %>
-                    <i class="fas fa-plus-circle "></i>
-                  <% end %>
-                <% end %>
-              </div>
-            <% end %>
+          <%=render 'followers' %>
           </div>
       </div>
     </div>

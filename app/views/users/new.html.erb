@@ -1,29 +1,9 @@
-
 <div class="mt-5 text-center">
     <div class="twitter-logo">
         <i class="fas fa-guitar fa-3x shadow p-3 mb-2"></i>
     </div>
     <h3 class="mb-5">Sign Up  For Music Tweets</h3>
-
-    <% if @user.errors.any? %>
-    <div class="container w-50">
-        <div class="alert alert-danger">
-            <div class="panel-heading">
-                <h4>
-                    <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
-                <div class="panel-body">
-                    <ul>
-                        <% @user.errors.full_messages.each do |message| %>
-                        <li>
-                            <%= message %>
-                        </li>
-                        <% end %>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-<% end %>
+    <%=render 'errors' %>
 </div>
 <div class="container mt-5">
     <div class="row">

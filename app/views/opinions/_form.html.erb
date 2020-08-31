@@ -1,0 +1,4 @@
+  <%= form_for @opinion, url: new_opinion_path, remote: true do |f| %>
+	  <%= f.text_area :Text, class: "form-control", placeholder: "Compose new tweet" %>
+	  <%= f.submit "Tweet", class: "btn-primary btn-sm mt-2" %>
+  <% end %>
