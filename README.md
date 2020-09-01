@@ -1,124 +1,83 @@
-# Twitter Redesign
----
-In this project, I redesigned a popular micro-blogging platform twitter.com also making the basic functionalities of the applcation.
+# ror-social-scaffold
 
-## Project Specification
----
-1. The user logs in to the app, only by typing the username (a proper authenticated login is not a requirement).
+Capstone projects are solo projects at the end of the each of the Microverse Main Technical Curriculum sections. It is a real-world-like project built with business specifications This project was at the end of the Ruby on Rails curriculum section. For this project, I created an app that allows you to talk about music artist by creating a tweet and various action such as liking a tweet and following another user.
 
-2. The user is presented with the homepage (see the Homepage screenshot above) that includes
-	 - Left-side menu (includes only links to pages that are implemented).
-	 - Tweets tab in the centre (skip Photos and Videos for this MVP).
-	 - Right-side section with Who to follow (skip Trending for this MVP).
+## Live demo
 
-3. The *Tweets* section includes:
-    - Simple form for creating a tweet.
-    - List of all tweets (sorted by most recent) that display tweet text and author details.
-
-4. The *Who to follow* section includes:
-    1. List of profiles that are not followed by the logged-in user (ordered by most recently added).
-
-5. When the user opens the profile page (see the *Userpage* screenshot above), they can see:
-    i. Left-side menu (includes only links to pages that are implemented).
-    ii. Cover picture and *Tweets* tab in the centre (skip other tabs and *Tweet to user* form).
-    iii. Right-side section with *Profile detailed info.*
-6. The *Profile detailed info* section includes:
-         i. User photo.
-         ii. Button to follow a user.
-         iii. Stats: total number of tweets, number of followers and number of following users.
-         iv. List of people who follow this user.
-
-## Future features
----
-  Add instant messaging functionality.
-  Performing various reactions, such as comments on tweets etc.
-
-#  Built With
-	Ruby v2.6.5
-	Ruby on Rails v5.2.1
-	Gems used for testing: Capybara, Rspec-Rails, Shoulda-matchers and FactoryBot
+- Homepage
+![alt text](homepage.png)
+- Userpage
+![alt text](userpage.png)
 
 
-# demo pictures
-  - homepage
-     ![alt text](homepage.png)
+## Built With
+
+- Ruby 2.6.2
+- Rails 5.2.1
+- Sublime
+- Bootstrap
+- PostgreSQL
+- Cloudinary
 
 
-  - userpage
-  	 ![alt text](userpage.png)
+## Getting Started 
 
-# live demo
-   [live demo](https://shielded-oasis-34342.herokuapp.com/login)
+## Prerequisites
+In order to make the program work, you need to have ruby interpreter installed in your system. You can get the latest version of ruby from [official website](https://www.ruby-lang.org/en/downloads/).
 
-Getting Started
+- Rails: 5.2.4
+- Postgres: >=9.5
+- Cloudinary
 
-To get a local copy up and running follow these steps:
----
-- Prerequisites
--   Ruby: 2.6.5
--   Rails: 5.2.1
--   Postgres: >=9.5
--   Git
+## Install
+  To test the Music zone app locally, you will need to:
 
-Start by:
+1. clone the repository
 
-- Forking the project
-- cd into the project directory
-- Run git checkout -b your-branch-name
-- Make your contributions
-- Push your branch up to your forked repository
-- Open a Pull Request with a detailed description to the development(or master if not available) branch of the original project for a review
-  -  Open folder in your local enviroment and run these lines of code to get started:
-  -  Bundle install gems
+```bash
+# Clone this repository
+$ git clone https://github.com/ignatius22/music-zone.git
 
-   - Setup database using the following command:
-      -rails db:create
-      -rails db:migrate
+# Go into the repository
+$ cd music-zone
 
-Setup cloudinary:
+# make sure you have ruby 2.7.1
+# install gems from Gemfile using bundle
+$ bundle install
+# create a database
 
-	Goto cloudinary.com setup your account and get your cloudinary credentials.
-	Add the credentials to the config/application.yml like this :
-	CLOUDINARY_NAME: "YOUR_CLOUDINARY_NAME"
-	CLOUDINARY_API_KEY: "YOUR_CLOUDINARY_API_KEY"
-	CLOUDINARY_API_SECRET: "YOUR_CLOUDINARY_API_SECRET"
-  
-- Don't forget to add that file to your .gitignore file.
-- Start server with:
-    rails server
+$ rails db:create
 
-- Then open a web page and go to port 3000 on your local machine.
+# migrate table to database
 
-    -Running tests
-    -rspec
-    -Deployment
+$ rails db:migrate
 
-The application was deployed on heroku. 
+# run live server
 
-#To deploy your own copy, you can follow the following steps:
+$ rails server
 
-##Add the pg gem
- If you’re using an existing app that was created without specifying --database=postgresql, you need to add the pg gem to your Rails project. Edit your Gemfile and change this line: 
+# run this url on your preffered browser
 
-gem 'sqlite3'
+http://localhost:3000/
 
-To this:
-  
-gem 'pg'
+# Run test
 
-Then bundle install.
+# to run tests
+$ rspec 
 
-#Deploy your application to Heroku
-    heroku create
+##Integration and Unit Test
+- Rspec
+- Capybara
 
-##Deploy your code:
-    git push heroku master
+## Usage
 
-##Migrate your database
-    heroku run rake db:migrate
+_you can create a user by clicking on the signup button
 
-##Visit your application
-    heroku open
+_You can sign In by clicking on the sign In button
+
+_You can create a tweet when you are logged In by clicking on the `tweet` Button after fill the form
+
+_You can follow a user by clicking the `+` icon next to the name of the user on the
 
 ## Authors
 
@@ -126,16 +85,21 @@ Then bundle install.
 
 - Github: [ignatius22](https://github.com/ignatius22)
 - Twitter: [@Iggy_code](https://twitter.com/iggy_code)
-- Linkedin: [ignatiussani](https://www.linkedin.com/in/ignatiussani)
+- Linkedin: [linkedin](https://www.linkedin.com/in/ignatiussani)
 
 
-- Show your support
-Give a star if you like this project!
+## 🤝 Contributing
 
-Acknowledgments
-You can access all the design info (color, typography, layouts) in this link:
-(https://www.behance.net/gregoirevella)
+Contributions, issues and feature requests are welcome!
 
-Design idea by Gregoire Vella.
+Feel free to check the <a href="https://github.com/ignatius22/ror-social-scaffold/issues" target="_blank">issues page</a>.
 
+## Show your support
 
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+ 
+- <a href="https://www.microverse.org/" target="_blank">Microverse</a>
+- <a href="https://www.ruby-lang.org/en/documentation/" target="_blank">Ruby Documentation</a>
+- <a href="https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=" target="_blank">Design Template Gregoire Vella</a>

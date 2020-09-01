@@ -13,8 +13,28 @@ module FollowingsHelper
 
 def follow_img(follower)
   unless follower.follower[:Photo].nil?
-    image_tag( follower.follower.Photo.thumb.url)
+    image_tag(follower.follower.Photo.thumb.url)
   end
   gravatar_for(follower.follower, size: 50)
 end
+
+def followed(follower)
+     unless current_user.id == @user.id
+       if current_user.followed.any? { |person| person.followedId == @user.id }
+          link_to unfollow_path(@user), method: :delete, class: "font-unfollow-icon" do
+            '<i class="fas fa-minus-circle "></i>'.html_safe
+         end
+     else
+      link_to follow_path(@user), class: "font-follow-icon" do 
+        '<i class="fas fa-plus-circle "></i>'.html_safe
+      end
+    end
+  end
+ end
 end
+
+
+
+
+
+
