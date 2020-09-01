@@ -1,16 +1,10 @@
 module UsersHelper
- def user_render(users)
-	users.each do |user|
-	content_tag(:div, class:"who-follow-profile")
-	content_tag(:div,class:"picture")
-	    link_to user_path(user), class: 'user' do 
-	    unless user[:Photo].nil?
-	    image_tag(user.Photo.thumb.url, class: 'photo')
-	      else
-	     gravatar_for(user, size: 50)
-	      end
-	     content_tag(:h6, user.Fullname)
-	    end
+	def render_user(user)
+	  unless user[:Photo].nil? 
+	  	image_tag(user.Photo.thumb.url, class: 'photo')
+	  else
+	    image_tag(opinion.Author.Photo.thumb.url)
+	    gravatar_for(user, size: 50)
 	end
 	end
 end

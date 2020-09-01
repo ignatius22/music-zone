@@ -26,10 +26,10 @@
             </div>
             <div class="tweet-content">
                 <h4>
-                    <%= opinion.Author.Fullname.upcase %>
+                  <%= opinion.Author.Fullname.upcase %>
                 </h4>
                 <p>
-                    <%= sanitize opinion.Text %>
+                  <%= sanitize opinion.Text %>
                 </p>
                 <span class="like">
                   <%= like_opinion(opinion) %>
@@ -49,11 +49,7 @@
             <div class="who-follow-profile">
                 <div class="picture">
                     <%= link_to user_path(user), class: 'user' do %>
-                    <% unless user[:Photo].nil? %>
-                    <%= image_tag user.Photo.thumb.url, class: 'photo' %>
-                    <% else %>
-                    <%= gravatar_for user, size: 50 %>
-                    <% end %>
+                      <%= render_user(user) %>
                     <h6>
                       <%= user.Fullname %>
                     </h6>
