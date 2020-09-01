@@ -1,4 +1,4 @@
-# ror-social-scaffold
+# Music Zone
 
 Capstone projects are solo projects at the end of the each of the Microverse Main Technical Curriculum sections. It is a real-world-like project built with business specifications This project was at the end of the Ruby on Rails curriculum section. For this project, I created an app that allows you to talk about music artist by creating a tweet and various action such as liking a tweet and following another user.
 

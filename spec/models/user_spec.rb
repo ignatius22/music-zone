@@ -1,17 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  subject(:user) { User.new(Username: 'Iggy', Fullname: 'Ignatius Sani') }
+
   describe 'validations' do
-    it { should validate_presence_of(:Fullname) }
     it { should validate_presence_of(:Username) }
-    it { should validate_length_of(:Username).is_at_least(3) }
-    it { should validate_length_of(:Fullname).is_at_least(3) }
   end
 
   describe 'associations' do
     it { should have_many(:opinions) }
     it { should have_many(:likes) }
-    it { should have_many(:followed).with_foreign_key(:followerId).class_name('Following') }
-    it { should have_many(:followers).with_foreign_key(:followedId).class_name('Following') }
+  end
+
+  context 'name should be valid' do
+    it 'should require a name' do
+      expect(FactoryBot.build(:user, Username: '')).not_to be_valid
+    end
+
+    it 'should accept letters in name' do
+      expect(FactoryBot.build(:user, Username: 'Iggy', Fullname: 'Ignatius Sani')).to be_valid
+    end
   end
 end

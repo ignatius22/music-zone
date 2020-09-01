@@ -1,5 +1,5 @@
 module UsersHelper
-	def render_user(user)
+   def render_user(user)
 	  unless user[:Photo].nil? 
 	  	image_tag(user.Photo.thumb.url, class: 'photo')
 	  else
@@ -8,7 +8,7 @@ module UsersHelper
 	end
 	end
 
-	def user_img(user)
+    def user_img(user)
 	  unless @user[:Photo].nil?
 	    image_tag(@user.Photo.medium.url , class: "rounded-circle ml-3 mr-3")
 	  else
@@ -32,4 +32,5 @@ module UsersHelper
        '<img src="https://via.placeholder.com/150" alt="">'.html_safe
       end
 	end
+
 end
