@@ -21,11 +21,7 @@
         <% @opinions.each do |opinion| %>
           <div class="user-avatar">
             <div class="picture">
-              <% if opinion.Author[:Photo].nil? %>
-                <%= gravatar_for opinion.Author, size: 50 %>
-              <% else %>
-                <%= image_tag opinion.Author.Photo.thumb.url %>
-              <% end %>           
+            <%= author_opinion(opinion) %>          
             </div>
           </div>
           <div class="user-content">
@@ -106,22 +102,10 @@
   <% @followers.each do |follower| %>
   <div class="follower-profile">
     <div class="follower-avatar">
-      <% unless follower.follower[:Photo].nil? %>
-        <%= image_tag follower.follower.Photo.thumb.url %>
-      <% else %>
-        <%= gravatar_for follower.follower, size: 50 %>
-      <% end %>
+      <%=follow_img(follower)%>
       <h6><%= follower.follower.Fullname %></h6>
     </div>
-    <% if current_user.followed.any? { |person| person.followedId == follower.follower.id }%>
-      <%= link_to unfollow_path(follower.follower), method: :delete, class: "follow-icons" do %>
-          <i class="fas fa-minus-circle "></i>
-      <% end %>
-    <%else%>
-      <%= link_to follow_path(follower.follower), class: "follow-icons" do %>
-        <i class="fas fa-plus-circle "></i>
-      <% end %>
-    <% end %>
+ <%=render_follows(follower)%>
   </div>
 <% end %>
   </div>

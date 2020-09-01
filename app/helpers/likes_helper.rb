@@ -7,7 +7,7 @@ module LikesHelper
        	end
 	  else
 	    link_to like_path(opinion), class: 'user-2' do
-	    	  '<i class="fas fa-heart "></i>'.html_safe
+	    	  '<i class="fas fa-heart"></i>'.html_safe
 	    	end
 	  end
 	  if opinion.likes.any?
