@@ -1,0 +1,5 @@
+<% if @opinion.errors.full_messages.any? %>
+  <% @opinion.errors.full_messages.each do |message| %>
+      <p class="text-danger"><%= message %></p>
+  <% end %>
+<% end %>

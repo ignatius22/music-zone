@@ -1,0 +1,49 @@
+<head>
+<%= stylesheet_link_tag 'users' %>
+<head>
+
+<div class="mt-5 text-center">
+    <div class="twitter-logo">
+        <i class="fas fa-guitar fa-3x shadow p-3 mb-2"></i>
+    </div>
+    <h3 class="mb-5">Sign Up  For Music Tweets</h3>
+    <%=render 'errors' %>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card card-signin flex-row my-5">
+                <div class="card-img-left d-none d-md-flex">
+                    <!-- Background image for card set in CSS! -->
+                </div>
+                <div class="card-body bg">
+                    <h5 class="card-title text-center">Register</h5>
+                    <%= form_for (@user), :url => users_path, :html => {class: "form-signin"} do |f| %>
+                    <div class="form-group">
+                        <%= f.text_field :Username, class: "form-control", placeholder: "Enter Username" %>
+                    </div>
+                    <div class="form-input">
+                        <%= f.text_field :Fullname, class: "form-control", placeholder: "Enter Fullname" %>
+                    </div>
+                    <div class="form-label mt-2">
+                        <%= f.label :Photo %>
+                    </div>
+                    <div class="form-label-group">
+                        <%= f.file_field :Photo, class: "form-control shadow" %>
+                    </div>
+                    <div class="form-label mt-2">
+                        <%= f.label :CoverImage%>
+                    </div>
+                    <div class="form-label-group">
+                        <%= f.file_field :CoverImage, class: "form-control shadow", placeholder: "choose a photo" %>
+                    </div>
+                    <div class="form-label-group">
+                        <%= f.submit "sign up",  class: "btn btn-lg btn-primary btn-block text-uppercase"%>
+                    </div>
+                    <%= link_to "Login in to Twitter", login_path %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

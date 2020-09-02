@@ -1,0 +1,33 @@
+<head>
+<%= stylesheet_link_tag 'users' %>
+<head>
+<%=render 'layouts/message' %>
+<div class="mt-5 text-center">
+    <div class="twitter-logo">
+        <i class="fas fa-guitar fa-3x shadow p-3 mb-2"></i>
+    </div>
+    <h3>Log in To Music Tweets</h3>
+</div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card card-signin flex-row my-5">
+                <div class="card-img-left d-none d-md-flex">
+                    <!-- Background image for card set in CSS! -->
+                </div>
+                <div class="card-body bg">
+                    <h5 class="card-title text-center">Sign In</h5>
+                    <%= form_for (:session), :url => login_path, :html => {class: "form-signin"} do |f| %>
+                    <div class="form-label-group">
+                        <%= f.text_field :Username, class: "form-control", placeholder: "Enter Username" %>
+                    </div>
+                    <div class="form-label-group">
+                        <%= f.submit "Log In",  class: "btn btn-lg btn-primary btn-block text-uppercase"%>
+                    </div>
+                    <%= link_to "Sign up for Twitter", signup_path %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

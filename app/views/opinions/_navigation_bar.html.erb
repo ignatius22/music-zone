@@ -1,0 +1,19 @@
+ <nav class="nav-bar">
+ 	<%= link_to icon('guitar', id: 'my-icon', class: "fa-2x text-white mt-1 ml-2"), root_path %>
+
+  <ul>
+    <li>
+      <%= link_to icon('pen', id: 'my-icon'), class: "fa-2x text-white mb-4" %>
+    </li>
+    <li>
+    	<%= link_to icon('envelope', id: 'my-icon'), class: "fa-2x text-white mt-1 ml-2" %>
+    </li>
+    <li>
+       <%= link_to icon('search', id: 'my-icon'), class: "fa-2x text-white mb-2" %>
+    </li>
+    <li>
+    	<%= link_to icon('cog', id: 'my-icon') %>
+    </li>
+  </ul>
+</nav>
+<%=render 'layouts/message' %>

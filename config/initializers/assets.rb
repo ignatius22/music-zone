@@ -1,4 +1,8 @@
 # Be sure to restart your server when you modify this file.
+Rails.application.config.assets.precompile += %w( users.css )
+Rails.application.config.assets.precompile += %w( followings.css )
+Rails.application.config.assets.precompile += %w( opinions.css )
+
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
