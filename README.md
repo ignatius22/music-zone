@@ -4,6 +4,8 @@ Capstone projects are solo projects at the end of the each of the Microverse Mai
 
 ## Live demo
 
+[live demo](https://shielded-oasis-34342.herokuapp.com/login)
+
 - Homepage
 ![alt text](homepage.png)
 - Userpage
@@ -92,7 +94,7 @@ _You can follow a user by clicking the `+` icon next to the name of the user on 
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the <a href="https://github.com/ignatius22/ror-social-scaffold/issues" target="_blank">issues page</a>.
+Feel free to check the <a href="https://github.com/ignatius22/music-zone/issues" target="_blank">issues page</a>.
 
 ## Show your support
 
