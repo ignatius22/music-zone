@@ -13,6 +13,13 @@ RSpec.feature 'Authentications', type: :feature do
     expect(page).to have_content('Log in to Twitter')
   end
 
+  scenario 'signup page user already taken' do
+    visit '/signup'
+    fill_in 'Username', with: user.Username
+    click_button 'Register'
+    expect(page).to have_content('User not created please try another name.')
+  end
+
   it 'Should Login' do
     visit root_path
     fill_in 'Username', with: 'user1'

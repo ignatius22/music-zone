@@ -42,9 +42,9 @@ gem 'popper_js', '~> 1.14.5'
 gem 'rails-controller-testing'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'bootstrap', '~> 4.4.1'
 gem 'faker'
 gem 'guard-rspec'
-gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'rubocop'
 

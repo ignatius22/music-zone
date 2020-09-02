@@ -1,6 +1,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
 
 $primary-color-dark: #213246;
 $primary-color: #50a4e2;
@@ -14,7 +15,7 @@ $main-background: #f5f6f8;
 body {
   background: #f5f8fa;
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
   font-weight: 400;
 }
 
@@ -255,6 +256,11 @@ main {
     font-size: 15px;
   }
 
+  h4 {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
   .tweet-content h4 {
     font-size: 0.8rem;
     margin-bottom: -0.2rem;
@@ -263,10 +269,6 @@ main {
   .clear {
     clear: both;
   }
-}
-
-h5 {
-  font-size: 12px;
 }
 
 :root {
