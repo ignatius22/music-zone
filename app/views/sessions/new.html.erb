@@ -1,33 +1,31 @@
 <head>
 <%= stylesheet_link_tag 'users' %>
 <head>
-<%=render 'layouts/message' %>
-<div class="mt-5 text-center">
-    <div class="twitter-logo">
-        <i class="fas fa-guitar fa-3x shadow p-3 mb-2"></i>
+
+
+<div class="container-fluid d-flex" style="width:100%">
+    <div class="userleft" style="display:flex; flex-direction:column; align-items:center; justify-content:center">
+        <h1 class="text-white container ">A Social-media Application Made for
+Music Lovers To Create Tweets About Music And Follow Each Other.</h1>
+        <p class="container text-white mt-4">Music Zone is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override</p>
     </div>
-    <h3>Log in To Music Tweets</h3>
-</div>
-<div class="container mt-3">
-    <div class="row">
-        <div class="col-lg-10 col-xl-9 mx-auto">
-            <div class="card card-signin flex-row my-5">
-                <div class="card-img-left d-none d-md-flex">
-                    <!-- Background image for card set in CSS! -->
-                </div>
-                <div class="card-body bg">
-                    <h5 class="card-title text-center">Sign In</h5>
-                    <%= form_for (:session), :url => login_path, :html => {class: "form-signin"} do |f| %>
-                    <div class="form-label-group">
-                        <%= f.text_field :Username, class: "form-control", placeholder: "Enter Username" %>
-                    </div>
-                    <div class="form-label-group">
-                        <%= f.submit "Log In",  class: "btn btn-lg btn-primary btn-block text-uppercase"%>
-                    </div>
-                    <%= link_to "Sign up for Twitter", signup_path %>
-                    <% end %>
-                </div>
-            </div>
+     <div class="mb-4 userright">
+     <%=render 'layouts/message' %>
+     <div></div>
+     <div class="container">
+       <%= form_for (:session), :url => login_path, :html => {class: "form-signin"} do |f| %>
+        <div class="form-group mb-4">
+           <label for="exampleInputEmail1">Username</label>
+           <%= f.text_field :Username, class: "form-control", id:"exampleInputEmail1", placeholder: "Enter Username" %>
+           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-label-group">
+        <%= f.submit "Log In",  class: "btn btn-lg btn-primary btn-block btn-color text-uppercase"%>
+        </div>
+        <div class="mt-2">
+        <%= link_to "Sign up", signup_path %>
+        </div>
+        <% end %>
         </div>
     </div>
 </div>
