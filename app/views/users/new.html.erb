@@ -2,14 +2,14 @@
 <%= stylesheet_link_tag 'users' %>
 <head>
     
-<div class="container-fluid d-flex" style="width:100%;">
-   <div class="userleft">Hello</div>
-   <div class="userright">
+<div class="contain-signup">
+ 
+
    <div style="width:100%">
    <%=render 'errors' %>
    </div>
-    <div></div>
-   <div class="container mb-4">
+  
+   <div class="contai">
      <%= form_for (@user), :url => users_path, :html => {class: "form-signin"} do |f| %>
         <div class="form-group">
         <label for="exampleInputEmail1">Username</label>

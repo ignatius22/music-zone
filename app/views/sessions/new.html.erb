@@ -3,16 +3,12 @@
 <head>
 
 
-<div class="container-fluid d-flex" style="width:100%">
-    <div class="userleft" style="display:flex; flex-direction:column; align-items:center; justify-content:center">
-        <h1 class="text-white container ">A Social-media Application Made for
-Music Lovers To Create Tweets About Music And Follow Each Other.</h1>
-        <p class="container text-white mt-4">Music Zone is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override</p>
-    </div>
-     <div class="mb-4 userright">
+<div class="contain">
+     <div class="">
+     <div class="error">
      <%=render 'layouts/message' %>
-     <div></div>
-     <div class="container">
+     </div>
+     <div class="containe">
        <%= form_for (:session), :url => login_path, :html => {class: "form-signin"} do |f| %>
         <div class="form-group mb-4">
            <label for="exampleInputEmail1">Username</label>

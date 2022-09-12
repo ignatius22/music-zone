@@ -1,15 +1,35 @@
-.userright {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh;
+body{
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+
 }
-.userleft {
-  width: 50%;
-  background-color: #353b48;
-  height: 100vh;
+
+.contain{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 65%);
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  /* optional size in px or %: */
+  width: 500px;
+}
+
+.contain-signup{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 38%);
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  /* optional size in px or %: */
+  width: 500px; 
+}
+
+.error{
+  font-size: 12px;
 }
 
 .btn-color{
